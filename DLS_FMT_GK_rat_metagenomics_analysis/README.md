@@ -10,12 +10,13 @@ The raw shotgun metagenomic sequencing data generated in this study have been de
 
 ## Workflow
 
-Shotgun metagenomic preprocessing and viral read-level classification were performed using NexVirome, an in-house Python-based bioinformatic workflow currently under separate manuscript preparation/review.
+Initial preprocessing and host-read prefiltering of shotgun metagenomic sequencing data were performed using a Nextflow workflow composed of standard nf-core modules, including fastp, Cutadapt, Bowtie2, and MultiQC.
 
-To support reproducibility of the present study, this folder provides study-specific workflow information, command-line parameters, custom viral reference database construction details, software versions, and downstream R scripts used for microbiome, virome, diversity, differential abundance, correlation, network, and figure-generation analyses.
+Bacterial taxonomic profiling was performed using a MetaPhlAn-based Python wrapper script.
 
-The full NexVirome source code will be made publicly available upon publication of the NexVirome workflow manuscript.
+Viral read-level classification was performed using a custom MEGABLAST-based Python script against a custom viral reference database, followed by accession-to-taxid mapping and taxonomic aggregation.
 
+Downstream microbiome and virome statistical analyses and figure generation were performed using R.
 
 ## Repository contents
 
@@ -32,3 +33,9 @@ Bacterial taxonomic profiling was performed using a MetaPhlAn-based Python wrapp
 Viral read-level classification was performed using a custom MEGABLAST-based Python script, followed by accession-to-taxid mapping and taxonomic aggregation.
 
 Downstream diversity analyses, differential abundance analyses, host–microbe correlation analyses, bacteriome–virome network analyses, S-plots, heatmaps, and figure generation were performed using R.
+
+## Notes
+
+Raw sequencing files, large reference databases, intermediate work directories, and local server-specific paths are not included in this repository.
+
+This repository provides study-specific preprocessing information, execution files, Python scripts, and downstream R scripts to support reproducibility of the analyses described in the manuscript.
