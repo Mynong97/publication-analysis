@@ -1,0 +1,31 @@
+Preprocessing workflow parameters
+
+Initial preprocessing and host-read prefiltering of shotgun metagenomic sequencing data were performed using the nf-core/vshotflow pipeline implemented in Nextflow.
+
+Workflow:
+- nf-core/vshotflow: v1.0.0dev
+- Nextflow: v25.10.2
+
+Input:
+- Input sample sheet: ASAN_FMT.csv
+- Paired-end shotgun metagenomic sequencing reads
+
+Output directory:
+- ALL
+
+Preprocessing steps:
+- Read quality control: fastp
+- Adapter and low-quality base trimming: Cutadapt
+- Host-read removal: Bowtie2
+- Quality-control summary: MultiQC
+
+Main parameters:
+- skip_cutadapt: false
+- skip_host_removal: false
+- host_index: /home/share/bowtie2_db/GRCm39/
+- host_removal_verysensitive: true
+- save_hostremoved_reads: true
+- publish_dir_mode: copy
+
+Output used for downstream analyses:
+- Quality-filtered, host-unmapped reads were retained for downstream bacteriome and virome assignment.
