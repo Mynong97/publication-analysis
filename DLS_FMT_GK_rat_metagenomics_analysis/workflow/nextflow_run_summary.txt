@@ -1,0 +1,13 @@
+Nextflow preprocessing run summary
+
+Initial preprocessing and host-read prefiltering of shotgun metagenomic sequencing data were performed using a Nextflow workflow composed of standard nf-core modules.
+
+The preprocessing workflow included:
+- read quality control with fastp
+- adapter and low-quality base trimming with Cutadapt
+- host-read removal with Bowtie2
+- quality-control summary generation with MultiQC
+
+Quality-filtered, host-unmapped reads were retained for downstream bacteriome and virome assignment.
+
+The Nextflow source code was not deposited in full because the preprocessing workflow was composed of standard nf-core modules. Study-specific parameters, software versions, and execution reports are provided in this repository to support reproducibility.
