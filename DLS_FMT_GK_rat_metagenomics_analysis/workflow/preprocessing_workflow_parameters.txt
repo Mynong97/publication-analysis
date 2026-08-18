@@ -29,3 +29,7 @@ Main parameters:
 
 Output used for downstream analyses:
 - Quality-filtered, host-unmapped reads were retained for downstream bacteriome and virome assignment.
+
+
+Note:
+Absolute local server paths were omitted from this public repository. In the original computing environment, host-read removal was performed using a pre-built Bowtie2 host-genome index.
