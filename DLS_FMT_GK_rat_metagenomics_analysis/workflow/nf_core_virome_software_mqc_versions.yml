@@ -1,0 +1,11 @@
+BOWTIE2_ALIGN:
+  bowtie2: 2.5.4
+  samtools: 1.21
+  pigz: 2.8
+CUTADAPT:
+  cutadapt: 5.0
+FASTP:
+  fastp: 0.24.0
+Workflow:
+    nf-core/vshotflow: v1.0.0dev
+    Nextflow: 25.10.2
