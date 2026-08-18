@@ -1,0 +1,20 @@
+Software versions used in this study
+
+Initial preprocessing and host-read prefiltering:
+- nf-core/vshotflow: v1.0.0dev
+- Nextflow: v25.10.2
+- fastp: v0.24.0
+- Cutadapt: v5.0
+- Bowtie2: v2.5.4
+- SAMtools: v1.21
+- pigz: v2.8
+- MultiQC: used for aggregation of quality-control metrics
+
+Bacteriome assignment:
+- MetaPhlAn: v4.1.0
+
+Virome assignment:
+- BLAST / MEGABLAST: v2.15.0
+
+Downstream statistical analyses:
+- R: v4.5.1
