@@ -22,7 +22,7 @@ Preprocessing steps:
 Main parameters:
 - skip_cutadapt: false
 - skip_host_removal: false
-- host_index: /home/share/bowtie2_db/GRCm39/
+- host_index: Bowtie2 index generated from the reference host genome
 - host_removal_verysensitive: true
 - save_hostremoved_reads: true
 - publish_dir_mode: copy
